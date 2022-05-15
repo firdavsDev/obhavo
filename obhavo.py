@@ -8,7 +8,7 @@ import datetime
 
 dt=datetime.datetime.today()
 
-TOKEN = "1575959645:AAGCdcKMlH2E2OHUlDUJFqwdnsaTZ4S2P7Y"
+TOKEN = "BOT TOKEN"
 
 bot=telebot.TeleBot(TOKEN)
 
@@ -46,8 +46,6 @@ def start(message):
 def obhavo(message):
     city=message.text
     api='https://api.openweathermap.org/data/2.5/weather'
-
-    #pp={'q':'city','appid':'2b1a7a854d5f2d7836540ae70a2702cc', 'units':'metric'}
 
     r=requests.post(url=api,params={'q':city, 'appid':'2b1a7a854d5f2d7836540ae70a2702cc','units':'metric'})
 
